@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&display=swap");
+@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+
+body {
+  @apply bg-gray-900 text-gray-100 ;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold font-normal;
+}
+
+@layer components {
+  .button {
+    @apply bg-amber-600 text-white py-2 px-6 inline-block rounded-md text-sm uppercase hover:bg-amber-500 transition-colors;
+  }
+
+  .product-card {
+    @apply transition-all duration-300 mb-8;
+  }
+
+  .product-card:hover {
+    @apply bg-gray-900 rounded shadow-lg;
+  }
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.5s ease forwards;
+}
+
+/* Custom utility classes */
+.container {
+  @apply mx-auto px-4;
+}
+
+/* Custom styling for sections */
+.section-title {
+  @apply relative mb-8;
+}
+
+.section-title h2 {
+  @apply text-2xl text-white font-normal inline-block pr-5 bg-gray-900 relative z-10;
+}
+
+/* Custom hover effects */
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-110;
+}
